@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | EduConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Edu Connect</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li class="current"><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="register">
+        <div class="container">
+            <h1>Create Your Account</h1>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="user-type">I am a:</label>
+                    <select id="user-type" name="user-type" required>
+                        <option value="">Select...</option>
+                        <option value="student">University Student (Tutor)</option>
+                        <option value="learner">Learner</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                
+                <div id="student-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="university">University</label>
+                        <input type="text" id="university" name="university">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjects">Subjects You Can Teach</label>
+                        <input type="text" id="subjects" name="subjects" placeholder="Math, Science, English...">
+                    </div>
+                </div>
+                
+                <div id="learner-fields" class="hidden">
+                    <div class="form-group">
+                        <label for="needs">Subjects You Need Help With</label>
+                        <input type="text" id="needs" name="needs" placeholder="Math, Reading, Computer Skills...">
+                    </div>
+                </div>
+                
+                <button type="submit" class="button_1">Register</button>
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <p>&copy; 2025 EduConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

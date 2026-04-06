@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | EduConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Edu Connect</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="matching.html">Find Match</a></li>
+                    <li class="current"><a href="resources.html">Resources</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="resources">
+        <div class="container">
+            <h1>Learning Resources</h1>
+            
+            <div class="resource-actions">
+                <button id="upload-resource" class="button_1">Upload Resource</button>
+                <div class="search-resources">
+                    <input type="text" placeholder="Search resources..." id="resource-search">
+                    <button class="button_1">Search</button>
+                </div>
+            </div>
+            
+            <div class="resource-categories">
+                <h3>Browse by Category</h3>
+                <div class="category-buttons">
+                    <button class="category-button active" data-category="all">All</button>
+                    <button class="category-button" data-category="math">Mathematics</button>
+                    <button class="category-button" data-category="science">Science</button>
+                    <button class="category-button" data-category="language">Languages</button>
+                    <button class="category-button" data-category="history">History</button>
+                    <button class="category-button" data-category="computer">Computer Skills</button>
+                    <button class="category-button" data-category="other">Other</button>
+                </div>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>Basic Algebra Guide</h4>
+                    <p class="resource-author">By: John D.</p>
+                    <p class="resource-description">A beginner's guide to algebraic concepts with practice problems.</p>
+                    <div class="resource-meta">
+                        <span class="resource-type">PDF</span>
+                        <span class="resource-category">Mathematics</span>
+                    </div>
+                    <button class="button_1">Download</button>
+                </div>
+                
+                <div class="resource-card">
+                    <h4>Introduction to Biology</h4>
+                    <p class="resource-author">By: Sarah M.</p>
+                    <p class="resource-description">Key concepts in biology with illustrations and diagrams.</p>
+                    <div class="resource-meta">
+                        <span class="resource-type">PDF</span>
+                        <span class="resource-category">Science</span>
+                    </div>
+                    <button class="button_1">Download</button>
+                </div>
+                
+                <div class="resource-card">
+                    <h4>English Grammar Basics</h4>
+                    <p class="resource-author">By: EduConnect Team</p>
+                    <p class="resource-description">Essential grammar rules with examples and exercises.</p>
+                    <div class="resource-meta">
+                        <span class="resource-type">PDF</span>
+                        <span class="resource-category">Languages</span>
+                    </div>
+                    <button class="button_1">Download</button>
+                </div>
+                
+                <div class="resource-card">
+                    <h4>Computer Fundamentals</h4>
+                    <p class="resource-author">By: Alex T.</p>
+                    <p class="resource-description">Basic computer skills for beginners.</p>
+                    <div class="resource-meta">
+                        <span class="resource-type">Video</span>
+                        <span class="resource-category">Computer Skills</span>
+                    </div>
+                    <button class="button_1">Watch</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Resource Modal (hidden by default) -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Upload a Resource</h2>
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="resource-title">Title</label>
+                    <input type="text" id="resource-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="resource-description">Description</label>
+                    <textarea id="resource-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resource-category">Category</label>
+                    <select id="resource-category" required>
+                        <option value="">Select...</option>
+                        <option value="math">Mathematics</option>
+                        <option value="science">Science</option>
+                        <option value="language">Languages</option>
+                        <option value="history">History</option>
+                        <option value="computer">Computer Skills</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resource-file">File</label>
+                    <input type="file" id="resource-file" required>
+                </div>
+                <button type="submit" class="button_1">Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EduConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
